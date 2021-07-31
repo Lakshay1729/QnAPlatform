@@ -13,7 +13,7 @@ public class QuestionInputDTO {
 	private Long companyId;
 	@NotNull
 	private Long subTopicId;
-	private List<Tags> tags;
+	private List<Long> tags;
 	private Long userId;
 	
 	public String getQuestionText() {
@@ -34,10 +34,10 @@ public class QuestionInputDTO {
 	public void setSubTopicId(Long subTopicId) {
 		this.subTopicId = subTopicId;
 	}
-	public List<Tags> getTags() {
+	public List<Long> getTags() {
 		return tags;
 	}
-	public void setTags(List<Tags> tags) {
+	public void setTags(List<Long> tags) {
 		this.tags = tags;
 	}
 	public Long getUserId() {

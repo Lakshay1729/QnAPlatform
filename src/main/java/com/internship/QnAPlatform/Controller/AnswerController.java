@@ -44,7 +44,7 @@ public class AnswerController {
 		return answerRepo.save(answer).getId();
 	}
 
-	@PostMapping("/inserAnswerLike")
+	@PostMapping("/insertAnswerLike")
 	@ResponseBody
 	public String insertAnswerLike(@RequestBody AnswerLikesInputDTO answerLikeInput) {
 		AnswerLikes answerLike = new AnswerLikes();

@@ -34,9 +34,7 @@ public class CompanyController {
 	@ResponseBody
 	public Company getCompany(@PathVariable("id") Long id) throws Exception
 	{
-//		System.out.println(id);
-//		Company company=companyService.readCompany(id);
-//		System.out.println(company.getCompanyName());
+
 		return companyService.readCompany(id);
 	}
 	

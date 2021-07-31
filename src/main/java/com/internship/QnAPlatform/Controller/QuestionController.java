@@ -63,10 +63,10 @@ public class QuestionController {
 		
 		question.setSubTopic(subTopicService.readSubTopic(questionDTO.getSubTopicId()));
 		tags.clear();
-		for(Tags tag:questionDTO.getTags())
+		for(Long tag:questionDTO.getTags())
 		{
 			
-			tags.add(tagService.readTag(tag.getId()));
+			tags.add(tagService.readTag(tag));
 			
 		}
 		question.setTag(tags);
@@ -78,7 +78,7 @@ public class QuestionController {
 		
 	}
 	
-	@PostMapping("/inserQuestionLike")
+	@PostMapping("/insertQuestionLike")
 	@ResponseBody
 	public String insertQuestionLike(@RequestBody QuestionLikesInputDTO questionLikeInput)
 	{
@@ -95,8 +95,5 @@ public class QuestionController {
 		return questionRepo.findById(id).get();
 	}
 
-//	@GetMapping("/get/Filter_Questions")
-//	public List<Question> getQuestions(@RequestBody FilterQuestionsRequest filters){
-//		return questionService.filterQuestions(filters);
-//	}
+
 }
